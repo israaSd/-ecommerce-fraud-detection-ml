@@ -18,8 +18,8 @@ np.random.seed(42)
 
 start = time.time()
 
-tx  = pd.read_csv('C:\\Users\\admin\\Desktop\\M2 thesis\\ieee-fraud-detection\\train_transaction.csv')
-idn = pd.read_csv('C:\\Users\\admin\\Desktop\\M2 thesis\\ieee-fraud-detection\\train_identity.csv')
+tx  = pd.read_csv('data\\ieee-fraud-detection\\train_transaction.csv')
+idn = pd.read_csv('data\\ieee-fraud-detection\\train_identity.csv')
 df = tx.merge(idn, how="left", on="TransactionID")
 del tx, idn
 print(f"Merged shape: {df.shape[0]:,} rows x {df.shape[1]} columns")
